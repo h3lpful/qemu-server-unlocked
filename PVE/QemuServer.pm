@@ -260,6 +260,13 @@ my $spice_enhancements_fmt = {
 };
 
 my $confdesc = {
+	arch => {
+	optional => 1,
+	type => 'string',
+	enum => ['x86_64', 'aarch64', 'mips64el'],
+	description => "Virtual processor architecture. Defaults to the host.",
+	default => 'x86_64',
+	},
     onboot => {
 	optional => 1,
 	type => 'boolean',
